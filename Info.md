@@ -13,3 +13,4 @@
     - sin animación cuando se hace scroll
 - general
     - alias para los imports
+    - traducciones ca
