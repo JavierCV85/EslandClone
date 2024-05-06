@@ -11,3 +11,5 @@
     - texto muy pequeño y centrado
     - blur se corta en seco
     - sin animación cuando se hace scroll
+- general
+    - alias para los imports
