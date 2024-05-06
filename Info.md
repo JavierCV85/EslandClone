@@ -3,6 +3,7 @@
 - `npm run astro add Tailwind`
 - `npm install -D tailwindcss-animated`
 - `npm install @fontsource-variable/onest`
+- `npm i @justinribeiro/lite-youtube`
 
 
 # TODO
