@@ -1,5 +1,9 @@
 ---
 import Logo from "@/components/Logo.astro";
+
+import { getI18n } from '@/i18n';
+const { currentLocale } = Astro;
+const i18n = getI18n({currentLocale})
 ---
 
 <footer class="bg-black/40 mt-24">
@@ -43,38 +47,38 @@ import Logo from "@/components/Logo.astro";
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                  <h2 class="mb-6 text-sm font-semibolduppercase text-white">Legal</h2>
+                  <h2 class="mb-6 text-sm font-semibolduppercase text-white">{i18n.FOOTER_LEGAL}</h2>
                   <ul class="text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="/" class="hover:underline">Aviso Legal</a>
+                          <a href="/" class="hover:underline">{i18n.FOOTER_AVISO_LEGAL}</a>
                       </li>
                       <li class="mb-4">
-                          <a href="/" class="hover:underline">Privacidad</a>
+                          <a href="/" class="hover:underline">{i18n.FOOTER_PRIVACIDAD}</a>
                       </li>
                       <li>
-                        <a href="/" class="hover:underline">Cookies</a>
+                        <a href="/" class="hover:underline">{i18n.FOOTER_COOKIES}</a>
                       </li>
                   </ul>
               </div>
               <div>
-                  <h2 class="mb-6 text-sm font-semibold uppercase text-white">Web Map</h2>
+                  <h2 class="mb-6 text-sm font-semibold uppercase text-white">{i18n.FOOTER_WEBMAP}</h2>
                   <ul class="text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="/" class="hover:underline ">Home</a>
+                          <a href="/" class="hover:underline ">{i18n.FOOTER_HOME}</a>
                       </li>
                       <li class="mb-4">
-                          <a href="/" class="hover:underline">Info</a>
+                          <a href="/" class="hover:underline">{i18n.FOOTER_INFO}</a>
                       </li>
                       <li/>
-                        <a href="/" class="hover:underline">Archivo</a>
+                        <a href="/" class="hover:underline">{i18n.FOOTER_ARCHIVO}</a>
                     </li>
                   </ul>
               </div>
               <div>
-                  <h2 class="mb-6 text-sm font-semibold uppercase text-white">Producido por</h2>
+                  <h2 class="mb-6 text-sm font-semibold uppercase text-white">{i18n.FOOTER_PRODUCIDO}</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="#" class="hover:underline">Javier Cambero</a>
+                          <a href="#" class="hover:underline">{i18n.FOOTER_PRODUCIDO_NAME}</a>
                       </li>
                   </ul>
               </div>
@@ -82,7 +86,7 @@ import Logo from "@/components/Logo.astro";
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© ESLAND 2021 - 2024 Todos los derechos reservados. - Esta no es la web oficial de los premios ESLAND.
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">{i18n.FOOTER_DERECHOS}
           </span>
           <div class="flex mt-4 sm:justify-center sm:mt-0">
                 <a href="#" class="text-white ms-5">

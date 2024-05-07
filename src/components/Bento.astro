@@ -2,6 +2,10 @@
 
 import Bentoitem from "@/components/Bentoitem.astro";
 
+import { getI18n } from '@/i18n';
+const { currentLocale } = Astro;
+const i18n = getI18n({currentLocale})
+
 ---
 
 <section
@@ -13,7 +17,7 @@ import Bentoitem from "@/components/Bentoitem.astro";
 >
     <Bentoitem 
         class="col-span-10 md:col-span-4" 
-        title="ANDORRA: EL CÉNIT DE LOS PREMIOS ESLAND"
+        title={i18n.BENTOITEM_1_TITLE}
     >
         <div
             slot="image"
@@ -25,15 +29,13 @@ import Bentoitem from "@/components/Bentoitem.astro";
             "
             style="background-image: url('/mountain.webp')"
         ></div>
-        <p slot="content" class="max-w-xl">
-            Una nueva edición <strong>cargada de novedades</strong> y contenido, que empezará varias semanas antes de la ansiada gala. <strong>Directos especiales, colaboraciones, conciertos y mucho más</strong> en lo que será una auténtica fiesta dedicada a la creación de contenido.
-        </p>
+        <p slot="content" class="max-w-xl" set:html={i18n.BENTOITEM_1_CONTENT}></p>
     </Bentoitem>
 
     <Bentoitem 
         class="col-span-10 md:col-span-6" 
-        title="LA ALFOMBRA BLANCA" 
-        subtitle="16 de febrero de 2024"
+        title={i18n.BENTOITEM_2_TITLE} 
+        subtitle={i18n.BENTOITEM_2_SUBTITLE}
     >
         <div
             slot="image"
@@ -45,15 +47,13 @@ import Bentoitem from "@/components/Bentoitem.astro";
             "
             style="background-image: url('/grefg.webp')"
         ></div>
-        <p slot="content" class="max-w-xl">
-            <strong>Uno de los días más esperados del año</strong> en la comunidad hispanohablante, <strong>con dos grandes hitos concentrados en un mismo directo.</strong> Una alfombra por la que pasarán <strong>los mejores streamers del año</strong>, luciendo sus mejores galas, momentos antes de saber si son los premiados.         
-        </p>
+        <p slot="content" class="max-w-xl" set:html={i18n.BENTOITEM_2_CONTENT}></p>
     </Bentoitem>
 
     <Bentoitem 
         class="col-span-10 md:col-span-6" 
-        title="LA GALA" 
-        subtitle="17 de febrero de 2024"
+        title={i18n.BENTOITEM_3_TITLE}
+        subtitle={i18n.BENTOITEM_3_SUBTITLE}
     >
         <div
             slot="image"
@@ -65,14 +65,12 @@ import Bentoitem from "@/components/Bentoitem.astro";
             "
             style="background-image: url('/pistas.webp')"
         ></div>
-        <p slot="content" class="max-w-xl">
-            Y una gala llena de emoción, <strong>con la entrega de premios, conciertos de artistas internacionales, y una gran cantidad de contenido</strong> pensado exclusivamente para la comunidad de streaming hispanohablante.
-        </p>
+        <p slot="content" class="max-w-xl" set:html={i18n.BENTOITEM_3_CONTENT}></p>
     </Bentoitem>
 
     <Bentoitem 
         class="col-span-10 md:col-span-4" 
-        title="DISFRUTA DEL REDDIT DE LA COMUNIDAD"
+        title={i18n.BENTOITEM_4_TITLE}
     >
         <div
             slot="image"
@@ -84,8 +82,6 @@ import Bentoitem from "@/components/Bentoitem.astro";
             "
             style="background-image: url('/laptop.webp')"
         ></div>
-        <p slot="content" class="max-w-xl">
-            Este año, el reddit no formará parte de las votaciones de los premios, pero sí que <strong>formará parte de la comunidad</strong>. El subreddit oficial está abierto para ti, para que <strong>compartas y interactúes con toda la comunidad</strong>.  
-        </p>
+        <p slot="content" class="max-w-xl" set:html={i18n.BENTOITEM_4_CONTENT}></p>
     </Bentoitem>
 </section>
