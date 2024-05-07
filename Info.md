@@ -8,12 +8,11 @@
 
 # TODO
 - arreglar header
-    - texto muy pequeño y centrado
-    - blur se corta en seco
     - sin animación cuando se hace scroll
 - general
     - alias para los imports
     - traducciones ca
+    - responsive
 - home
     - imagen no funciona top-10
     - animation-timeline: scroll(); animation-range: 0 500px; no funcionan en firefox
