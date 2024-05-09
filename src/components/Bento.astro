@@ -11,12 +11,12 @@ const i18n = getI18n({currentLocale})
 <section
     class={`
         w-full max-w-[1400px]
-        grid grid-cols-10 auto-rows-[35rem] gap-4
-        mx-auto p-20    
+        grid lg:grid-cols-10 auto-rows-[30rem] gap-4
+        mx-auto p-6 md:p-12 lg:p-20  
     `}
 >
     <Bentoitem 
-        class="col-span-10 md:col-span-4" 
+        class="col-span-10 lg:col-span-4" 
         title={i18n.BENTOITEM_1_TITLE}
     >
         <div
@@ -29,11 +29,11 @@ const i18n = getI18n({currentLocale})
             "
             style="background-image: url('/mountain.webp')"
         ></div>
-        <p slot="content" class="max-w-xl" set:html={i18n.BENTOITEM_1_CONTENT}></p>
+        <p slot="content" class="text-base md:text-lg max-w-xl" set:html={i18n.BENTOITEM_1_CONTENT}></p>
     </Bentoitem>
 
     <Bentoitem 
-        class="col-span-10 md:col-span-6" 
+        class="col-span-10 lg:col-span-6" 
         title={i18n.BENTOITEM_2_TITLE} 
         subtitle={i18n.BENTOITEM_2_SUBTITLE}
     >
@@ -47,11 +47,11 @@ const i18n = getI18n({currentLocale})
             "
             style="background-image: url('/grefg.webp')"
         ></div>
-        <p slot="content" class="max-w-xl" set:html={i18n.BENTOITEM_2_CONTENT}></p>
+        <p slot="content" class="text-base md:text-lg max-w-xl" set:html={i18n.BENTOITEM_2_CONTENT}></p>
     </Bentoitem>
 
     <Bentoitem 
-        class="col-span-10 md:col-span-6" 
+        class="col-span-10 lg:col-span-6" 
         title={i18n.BENTOITEM_3_TITLE}
         subtitle={i18n.BENTOITEM_3_SUBTITLE}
     >
@@ -65,11 +65,11 @@ const i18n = getI18n({currentLocale})
             "
             style="background-image: url('/pistas.webp')"
         ></div>
-        <p slot="content" class="max-w-xl" set:html={i18n.BENTOITEM_3_CONTENT}></p>
+        <p slot="content" class="text-base md:text-lg max-w-xl" set:html={i18n.BENTOITEM_3_CONTENT}></p>
     </Bentoitem>
 
     <Bentoitem 
-        class="col-span-10 md:col-span-4" 
+        class="col-span-10 lg:col-span-4" 
         title={i18n.BENTOITEM_4_TITLE}
     >
         <div
@@ -82,6 +82,6 @@ const i18n = getI18n({currentLocale})
             "
             style="background-image: url('/laptop.webp')"
         ></div>
-        <p slot="content" class="max-w-xl" set:html={i18n.BENTOITEM_4_CONTENT}></p>
+        <p slot="content" class="text-base md:text-lg max-w-xl" set:html={i18n.BENTOITEM_4_CONTENT}></p>
     </Bentoitem>
 </section>

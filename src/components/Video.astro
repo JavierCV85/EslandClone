@@ -1,22 +1,27 @@
 ---
 import { getI18n } from '@/i18n';
+import Button from "@/components/Button.astro";
+
 const { currentLocale } = Astro;
 const i18n = getI18n({currentLocale})
 ---
 
-<div class="w-full relative">
-    <img
-        class="absolute top-10 z-10 w-[800px] left-0 right-0 m-auto"
-        alt={i18n.VIDEO_ALT}
-        src="/logo-home.svg"
-    />
+<div class="w-full relative h-[80vh] max-w-[100vw] md:h-full md:aspect-video">
+    <div class="absolute z-10 top-14 left-1/2 -translate-x-1/2 right-0 m-auto flex items-center flex-col">
+        <img
+            alt={i18n.VIDEO_ALT}
+            src="/logo-home.svg"
+        />
+        <Button url="https://www.youtube.com/watch?v=1YmpPrqKP-g">{i18n.VIDEO_BUTTON}</Button>
+    </div>
+    
     <video
-        class="w-full h-screen object-cover object-top animate-fade animate-ease-in-out animate-duration-1000"
+        class="w-full h-full object-cover object-top animate-ease-in-out animate-fade animate-duration-1000 cp-v"
         src="/video.webm"
         autoplay
         loop
         muted
-        style="clip-path: polygon(0 0, 100% 0, 199% 85%, 50% 100%, 50% 100%, 0 85%);"
+        style="clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 50% 100%, 0 85%);"
     ></video>
     <video
         class="absolute -bottom-48 blur-3xl -z-40"
