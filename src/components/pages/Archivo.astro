@@ -2,6 +2,7 @@
 import Layout from '@/layouts/Layout.astro';
 import HeroContainer from '@/components/HeroContainer.astro';
 import Button from "@/components/Button.astro";
+import Numeros from '@/components/Numeros.astro';
 
 import { getI18n } from '@/i18n';
 const { currentLocale } = Astro;
@@ -19,5 +20,7 @@ const i18n = getI18n({currentLocale})
 		<h1 class="text-6xl mb-20 font-tomaso tracking-widest">EDICIONES ANTERIORES</h1>
 		<Button class="animate-fade-up" url="https://www.youtube.com/watch?v=1YmpPrqKP-g">REVIVE LA ÚLTIMA GALA</Button>
 	</HeroContainer>
-	<main></main>
+	<main>
+		<Numeros />
+	</main>
 </Layout>
