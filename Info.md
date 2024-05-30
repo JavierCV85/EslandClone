@@ -4,7 +4,7 @@
 - `npm install -D tailwindcss-animated`
 - `npm install @fontsource-variable/onest`
 - `npm i @justinribeiro/lite-youtube`
-
+- `npm i photoswipe --save` 
 
 # TODO
 - arreglar header
