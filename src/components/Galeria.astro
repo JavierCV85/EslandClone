@@ -12,14 +12,22 @@ const GALLERY_IMAGES = [
   {
     Array.from({ length: 9 }).map((_,i) => (
       <a
-        class="rounded-xl shadow-xl shadow-blue-400/10
-        hover:shadow-2xl hover:shadow-sky-300/75 transition-all
-        overflow-hidden hover:scale-105"
+        class="group rounded-xl transition-all hover:scale-105 relative"
         href={`/archivo-page/1/gallery/img-${i + 1}.webp`}
         target="_blank"
       >
         <img 
+          class="blur-xl absolute inset-0 transition 
+          group-hover:contrast-150 opacity-75 -z-10"
+          loading="lazy"
           src={`/archivo-page/1/gallery/thumbnails/img-${i + 1}.webp`}
+          alt=""
+        />
+        <img 
+          class="rounded-xl"
+          loading="lazy"
+          src={`/archivo-page/1/gallery/thumbnails/img-${i + 1}.webp`}
+          alt=""
         />
       </a>
     ))
